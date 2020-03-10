@@ -20,5 +20,11 @@ wget http://brc.wustl.edu/SPACE/shaopengliu/Singularity_image/rna-seq/rna-seq_mm
 
 Please Run at same directory with your data OR the soft link of your data
 ```
-
+singularity run -B ./:/process <path-to-image> -r <SE/PE> -g <mm10 > -o <read_file1> -p <read_file2>
+```
+**soft link introduction:** For soft link of data, need to add one bind option for singularity, which is ```-B <full-path-of-original-position>:<full-path-of-original-position>```. For example, soft link the data from /scratch to run on folder /home/example:
+```
+ln -s /scrach/mydata.fastq.gz /home/example; *Please make sure you use the absolute path*
+cd /home/example
+singularity run -B ./:/process -B /scratch:/scratch /home/image/ATAC_IAP_v1.00.simg -r PE -g mm10 -o read1.fastq.gz -p read2.fastq.gz
 ```
