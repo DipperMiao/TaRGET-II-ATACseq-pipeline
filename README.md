@@ -44,10 +44,16 @@ singularity run -B ./:/process -B /scratch:/scratch /home/image/ATAC_IAP_v1.00.s
 
 `-i`: (optional) insertion free region finding parameters used by Wellington Algorithm (Jason Piper etc. 2013), see documentation for more details.
 
-#Output files
+# Output files
+
 The major outputs produced by the pipeline are:
    1)	JSON file with quality control measurement of user supplied dataset. Quality control measurement of ENCODE dataset is  provided for references. 
    2)	Log file with processing status of each step 
    3)	Processed files after alignment (.bam) and peak calling (.narrowPeak) 
    4)	Bigwig file for visualization purpose
+
+# Quailty Control Parameters
+
+
+
 
