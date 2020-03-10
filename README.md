@@ -53,10 +53,10 @@ After running the pipeline, there will be a folder called Processed_${name}, all
    4)	Bigwig file for visualization purpose
 
 # Quailty Control Parameters
-The josn output file contains the QC parameters that were used to check the quality of ATAC-seq data.
+The JSON output file contains the QC parameters that were used to check the quality of ATAC-seq data.
 
-Key QC parameters:
-
+**Key QC parameters:**
+ 
 **single_end**: Useful single ends: the total number of useful single ends. This is each end of a non-redundant uniquely mapped read pair.
 
 **enrp**: The promoters of active genes provide a positive control for open chromatin regions. The ATAC-seq useful ends (E) enriched on detected promoters (overlapping ATAC-seq peaks) are used as a QC metric to measure the signal enrichment.
@@ -66,5 +66,32 @@ Key QC parameters:
 **rup**: The percentage of all useful ends that fall into the called peak regions with at least 50% overlap. 
 
 **bk**: Fifty thousand genomic regions (500bp each) are randomly selected from the genome outside of ATAC-seq peaks. The ATAC-seq signal in each region is calculated as reads per kilobase per million mapped reads (RPKM). The percentage of all such regions with the ATAC-seq signal over the theoretical threshold (RPKM=0.377) is considered high-background and used as a QC metric to indicate the background noise
+
+|QC parameter|Value|QC score|
+| :---: | :---: | :---: |
+| single end | >=40000000 | 2 |
+| single end | \[25000000, 40000000\) | 1 |
+| single end | <25000000 | -1 |
+| rup | >=0.2 | 2 |
+| rup | \[0.12, 0.2\) | 1 |
+| rup | <0.12 | -1 |
+| enrp | >=11 | 2 |
+| enrp | \[7, 11\) | 1 |
+| enrp | <7 | -1 |
+| enrs | >=18 | 2 |
+| enrs | \[15, 18\) | 1 |
+| enrs | <15 | -1 |
+| bk | <=10 | 2 |
+| bk | \(10, 20\] | 1 |
+| bk | >20 | -1 |
+
+The QC score used to check the quality of data:
+| Type |QC cutoff| >= cutoff | < cutoff |
+| :---: | :---: | :---: | :---: |
+| Sum of QC score | 5 | good quality | bad quaility |
+
+
+
+
 
 
