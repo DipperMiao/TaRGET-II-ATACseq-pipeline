@@ -69,26 +69,26 @@ The JSON output file contains the QC parameters that were used to check the qual
 
 |QC parameter|Value|QC score|
 | :---: | :---: | :---: |
-| single end | >=40000000 | 2 |
-| single end | \[25000000, 40000000\) | 1 |
-| single end | <25000000 | -1 |
-| rup | >=0.2 | 2 |
-| rup | \[0.12, 0.2\) | 1 |
-| rup | <0.12 | -1 |
-| enrp | >=11 | 2 |
-| enrp | \[7, 11\) | 1 |
-| enrp | <7 | -1 |
-| enrs | >=18 | 2 |
-| enrs | \[15, 18\) | 1 |
-| enrs | <15 | -1 |
-| bk | <=10 | 2 |
-| bk | \(10, 20\] | 1 |
-| bk | >20 | -1 |
+| **single end** | >=40000000 | 2 |
+| **single end** | \[25000000, 40000000\) | 1 |
+| **single end** | <25000000 | -1 |
+| **rup** | >=0.2 | 2 |
+| **rup** | \[0.12, 0.2\) | 1 |
+| **rup** | <0.12 | -1 |
+| **enrp** | >=11 | 2 |
+| **enrp** | \[7, 11\) | 1 |
+| **enrp** | <7 | -1 |
+| **enrs** | >=18 | 2 |
+| **enrs** | \[15, 18\) | 1 |
+| **enrs** | <15 | -1 |
+| **bk** | <=10 | 2 |
+| **bk** | \(10, 20\] | 1 |
+| **bk** | >20 | -1 |
 
 The QC score used to check the quality of data:
 | Type |QC cutoff| >= cutoff | < cutoff |
 | :---: | :---: | :---: | :---: |
-| Sum of QC score | 5 | good quality | bad quaility |
+| **Sum of QC score** | 5 | good quality | bad quaility |
 
 
 
