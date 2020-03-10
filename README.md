@@ -32,8 +32,7 @@ singularity run -B ./:/process -B /scratch:/scratch /home/image/ATAC_IAP_v1.00.s
 ```
 #parameters:
 
-`-h`: help information.
-
+`-h`: help information. 
 `-r`: SE for single-end, PE for paired-end.
 
 `-g`: genome reference, one simg is designed for ONLY one species due to the file size. For now the supported genoms are mm10.
