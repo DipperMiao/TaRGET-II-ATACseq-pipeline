@@ -33,14 +33,20 @@ singularity run -B ./:/process -B /scratch:/scratch /home/image/ATAC_IAP_v1.00.s
 #parameters:
 
 `-h`: help information.
-`-r`: SE for single-end, PE for paired-end
-`-g`: genome reference, one simg is designed for ONLY one species due to the file size. For now the supported genoms are: <mm10>.
-`-o`: reads file 1 or the SE reads file, must be ended by .fastq or .fastq.gz or .sra (for both SE and PE).
-   
-```-p```: reads file 2 if input PE data, must be ended by .fastq or .fastq.gz
-```-c```: (optional) specify read length minimum cutoff for methylQA filtering, default 38
-```-t```: (optional) specify number of threads to use, default 24
-```-i```: (optional) insertion free region finding parameters used by Wellington Algorithm (Jason Piper etc. 2013), see documentation for more details.
+
+`-r`: SE for single-end, PE for paired-end.
+
+`-g`: genome reference, one simg is designed for ONLY one species due to the file size. For now the supported genoms are mm10.
+
+`-o`: reads file 1 or the SE reads file, must be ended by .fastq or .fastq.gz or .sra (for both SE and PE). 
+
+`-p`: reads file 2 if input PE data, must be ended by .fastq or .fastq.gz.
+
+`-c`: (optional) specify read length minimum cutoff for methylQA filtering, default 38.
+
+`-t`: (optional) specify number of threads to use, default 24.
+
+`-i`: (optional) insertion free region finding parameters used by Wellington Algorithm (Jason Piper etc. 2013), see documentation for more details.
 
 
 
