@@ -26,10 +26,10 @@ The following mouse genome and gene references were built into the singularity i
 
 **2-step guideline for pipeline usage:**
 
-**step.1** Download the singularity image [here](http://brc.wustl.edu/SPACE/shaopengliu/Singularity_image/rna-seq/rna-seq_mm10_v4.simg):
+**step.1** Download the singularity image [here] (http://regmedsrv1.wustl.edu/Public_SPACE/bmiao/Public_html/TaRGET_II_pipeline/ATACseq/ATAC_mm10_target_181103.simg):
 ```
 # download image from local server:
-wget http://brc.wustl.edu/SPACE/shaopengliu/Singularity_image/rna-seq/rna-seq_mm10_v4.simg  
+wget http://regmedsrv1.wustl.edu/Public_SPACE/bmiao/Public_html/TaRGET_II_pipeline/ATACseq/ATAC_mm10_target_181103.simg  
 ```
 **step.2** Process ATAC-seq data with the image: 
 
