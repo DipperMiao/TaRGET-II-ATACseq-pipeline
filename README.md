@@ -6,3 +6,7 @@ The TaRGET II ATAC-seq pipeline is designed for standardized data processing of 
    3)	Processed files after alignment (.bam) and peak calling (.narrowPeak) 
    4)	Bigwig file for visualization purpose
 
+
+# Usage:
+
+2-step guideline:
