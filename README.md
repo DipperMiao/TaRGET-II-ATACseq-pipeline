@@ -46,14 +46,25 @@ singularity run -B ./:/process -B /scratch:/scratch /home/image/ATAC_IAP_v1.00.s
 
 # Output files
 
-The major outputs produced by the pipeline are:
+After running the pipeline, there will be a folder called Processed_${name}, all intermediate files and final output files are stored there. The major outputs produced by the pipeline are:
    1)	JSON file with quality control measurement of user supplied dataset. Quality control measurement of ENCODE dataset is  provided for references. 
    2)	Log file with processing status of each step 
    3)	Processed files after alignment (.bam) and peak calling (.narrowPeak) 
    4)	Bigwig file for visualization purpose
 
 # Quailty Control Parameters
+The josn output file contains the QC parameters that were used to check the quality of ATAC-seq data.
 
+Key QC parameters:
 
+**single_end**: Useful single ends: the total number of useful single ends. This is each end of a non-redundant uniquely mapped read pair.
+
+**enrp**: The promoters of active genes provide a positive control for open chromatin regions. The ATAC-seq useful ends (E) enriched on detected promoters (overlapping ATAC-seq peaks) are used as a QC metric to measure the signal enrichment.
+
+**enrs**: The ATAC-seq signal (useful ends) enriched on the detected ATAC-seq peaks is used as a QC metric to measure the signal enrichment at the genome-wide level. To avoid sequencing-depth bias, 10 million useful ends (E) are sampled from the complete dataset, and peak calling is performed to identify the open chromatin regions. enrs is calculated after 10 million pseudo counts are added into the calculation as background, which can avoid calculation failure caused by the low sequencing depth of testing ATAC-seq library.
+
+**rup**: The percentage of all useful ends that fall into the called peak regions with at least 50% overlap. 
+
+**bk**: Fifty thousand genomic regions (500bp each) are randomly selected from the genome outside of ATAC-seq peaks. The ATAC-seq signal in each region is calculated as reads per kilobase per million mapped reads (RPKM). The percentage of all such regions with the ATAC-seq signal over the theoretical threshold (RPKM=0.377) is considered high-background and used as a QC metric to indicate the background noise
 
 
