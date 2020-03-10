@@ -9,8 +9,11 @@ The TaRGET II ATAC-seq pipeline is designed for standardized data processing of 
 
 # Usage:
 
-##2-step guideline for pipeline usage:
+**2-step guideline for pipeline usage:**
 step.1 Download the singularity image of the pipeline:
-
+```
+# download image from local server:
+wget http://brc.wustl.edu/SPACE/shaopengliu/Singularity_image/rna-seq/rna-seq_mm10_v4.simg  
+```
 step.2 Process ATAC-seq data with the image: 
 Please Run at same directory with your data OR the soft link of your data
