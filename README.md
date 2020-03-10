@@ -9,4 +9,8 @@ The TaRGET II ATAC-seq pipeline is designed for standardized data processing of 
 
 # Usage:
 
-2-step guideline:
+##2-step guideline for pipeline usage:
+step.1 Download the singularity image of the pipeline:
+
+step.2 Process ATAC-seq data with the image: 
+Please Run at same directory with your data OR the soft link of your data
