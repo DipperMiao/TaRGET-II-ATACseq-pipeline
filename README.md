@@ -12,6 +12,7 @@ The TaRGET II ATAC-seq pipeline is designed for standardized data processing of 
 **methylQA (v0.1.9)** was used to generate the reads density and reads mapping statistics.
 
 **macs2 (v2.2.5)** was used for peak calling process.
+
 **samtools (v1.9)** and **bedtools (v2.29)** were used to process the sequence alignments and genome features.
 
 ### Genomic References Used in the Pipeline 
